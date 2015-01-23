@@ -1,0 +1,285 @@
+body {
+  background: transparent; }
+
+.wp-color-result {
+  height: auto; }
+
+.btn, .form-button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .btn:hover, .form-button:hover {
+    color: #333333;
+    text-decoration: none; }
+  .btn:focus, .form-button:focus {
+    outline: thin dotted #333333; }
+  .btn:active, .form-button:active, .btn.active, .active.form-button {
+    background-image: none;
+    outline: 0;
+    box-shadow: inset 0 3px 5px #21759b; }
+
+.form-button {
+  color: white;
+  background-color: #67a6df;
+  border-color: #3d8dd6;
+  padding: 10px 15px;
+  font-size: 20px; }
+  .form-button:hover {
+    color: white;
+    background-color: #3d8dd6;
+    border-color: #2774b9; }
+
+.form-heading {
+  padding-left: 15px; }
+
+.al_admin_area {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: block; }
+  .al_admin_area * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .al_admin_area:after, .al_admin_area:before {
+    content: "";
+    display: table;
+    width: 100%;
+    clear: both;
+    float: none; }
+  .al_admin_area .uploaded-file-information {
+    background: #2da519;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 5px;
+    margin-top: 5px; }
+  .al_admin_area .dismiss-image {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: block;
+    position: absolute;
+    background: #ccc;
+    color: #fff;
+    text-align: center;
+    right: 0;
+    top: 0;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 7px 10px;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    .al_admin_area .dismiss-image:hover {
+      background: #df4343; }
+  .al_admin_area textarea {
+    display: block;
+    width: 100%;
+    min-height: 100px; }
+  .al_admin_area label {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #636363; }
+    .al_admin_area label i {
+      margin-right: 15px; }
+  .al_admin_area .map-info-trigger {
+    font-size: 25px;
+    margin-left: 10px;
+    color: #67a6df; }
+  .al_admin_area .infiltrate-tooltip .explain-map-content {
+    width: 512px;
+    height: 219px;
+    background: url("../img/map_share.jpg"); }
+  .al_admin_area .infiltrate-tooltip .tooltip-inner {
+    max-width: none; }
+  .al_admin_area .child_labels {
+    position: relative;
+    margin: 0; }
+    .al_admin_area .child_labels:after, .al_admin_area .child_labels:before {
+      content: "";
+      display: table;
+      width: 100%;
+      clear: both;
+      float: none; }
+    .al_admin_area .child_labels input[type="checkbox"] {
+      float: left; }
+    .al_admin_area .child_labels label {
+      float: right; }
+  .al_admin_area .image-wrap {
+    position: relative;
+    margin-top: 10px;
+    background: #fff; }
+    .al_admin_area .image-wrap img {
+      display: block;
+      height: auto;
+      margin: 15px auto;
+      float: none; }
+    .al_admin_area .image-wrap:after, .al_admin_area .image-wrap:before {
+      content: "";
+      display: table;
+      width: 100%;
+      clear: both;
+      float: none; }
+    .al_admin_area .image-wrap i.fa-remove {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer; }
+  .al_admin_area input[type="text"] {
+    display: block;
+    width: 90%;
+    margin: 2px auto;
+    border-radius: 0; }
+  .al_admin_area input[type="file"] {
+    opacity: 0;
+    height: 1px;
+    display: block; }
+  .al_admin_area label[for$="_upload"] {
+    background: #ccc;
+    padding: 10px;
+    color: #fff;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    .al_admin_area label[for$="_upload"]:hover {
+      background: #67a6df; }
+  .al_admin_area .tab-content {
+    margin: 0;
+    border: 1px solid #ddd;
+    width: 75%;
+    float: left; }
+    .al_admin_area .tab-content:after, .al_admin_area .tab-content:before {
+      content: "";
+      display: table;
+      width: 100%;
+      clear: both;
+      float: none; }
+    .al_admin_area .tab-content .tab-pane {
+      padding: 15px;
+      background: #fff;
+      min-height: 307px; }
+      .al_admin_area .tab-content .tab-pane:after, .al_admin_area .tab-content .tab-pane:before {
+        content: "";
+        display: table;
+        width: 100%;
+        clear: both;
+        float: none; }
+  .al_admin_area .row-with-input {
+    border-radius: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 15px;
+    background: #f6fbfd;
+    /*Desktop*/ }
+  .al_admin_area .inset-row {
+    margin: 0 0 20px 0; }
+  .al_admin_area .nav-tabs {
+    margin: 0;
+    width: 25%;
+    display: block;
+    float: left;
+    border-bottom: none; }
+    .al_admin_area .nav-tabs li {
+      float: none; }
+      .al_admin_area .nav-tabs li.active a {
+        border-top: 1px solid #ddd;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid #ddd;
+        border-left: 1px solid #ddd; }
+      .al_admin_area .nav-tabs li a {
+        text-decoration: none;
+        margin: 0 -1px 0 0; }
+        .al_admin_area .nav-tabs li a h3 {
+          margin: 5px 10px; }
+        .al_admin_area .nav-tabs li a:focus {
+          box-shadow: none; }
+  .al_admin_area .al_checkbox label {
+    display: block;
+    width: 100%;
+    text-align: right; }
+    .al_admin_area .al_checkbox label i {
+      float: left; }
+  .al_admin_area .al_checkbox > label {
+    text-align: center;
+    cursor: default;
+    display: block;
+    width: 100%; }
+  .al_admin_area .al_checkbox .fa-toggle-off {
+    font-size: 30px; }
+  .al_admin_area .al_checkbox .fa-toggle-on {
+    font-size: 30px;
+    color: #2da519; }
+  .al_admin_area .al_checkbox input[type='checkbox'] {
+    display: block;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    top: 1px; }
+  .al_admin_area label[for*="_facebook"] i:before {
+    content: "\f082";
+    color: #21759b; }
+  .al_admin_area label[for*="_twitter"] i:before {
+    content: "\f099";
+    color: #67a6df; }
+  .al_admin_area label[for*="_google_plus"] i:before {
+    content: "\f0d5";
+    color: #df4343; }
+  .al_admin_area label[for*="_linkedin"] i:before {
+    content: "\f0e1";
+    color: #21759b; }
+  .al_admin_area label[for*="_instagram"] i:before {
+    content: "\f16d";
+    color: #6e4529; }
+  .al_admin_area label[for*="_youtube"] i:before {
+    content: "\f167";
+    color: #df4343; }
+  .al_admin_area label[for*="_pinterest"] i:before {
+    content: "\f0d2";
+    color: #df4343; }
+  .al_admin_area label[for*="_vimeo"] i:before {
+    content: "\f194";
+    color: #67a6df; }
+  .al_admin_area label[for*="_vk"] i:before {
+    content: "\f189";
+    color: #21759b; }
+  .al_admin_area label[for*="contact_map"] i:before {
+    content: "\f041";
+    color: #df4343; }
+  .al_admin_area label[for*="contact_phone"] i:before {
+    content: "\f095"; }
+  .al_admin_area label[for*="discount_text"] i:before {
+    content: "\f0a1"; }
+  .al_admin_area label[for*="copyright"] i:before {
+    content: "\f1f9"; }
+  .al_admin_area label[for*="width"] i:before {
+    content: "\f07e"; }
+  .al_admin_area label[for*="color"] i:before {
+    content: "\f1fc"; }
+  .al_admin_area label[for*="_skype"] i:before {
+    content: "\f17e";
+    color: #67a6df; }
+  .al_admin_area label[for*="_mail"] i:before {
+    content: "\f0e0"; }
+
+/*# sourceMappingURL=theme_admin_stl.css.map */

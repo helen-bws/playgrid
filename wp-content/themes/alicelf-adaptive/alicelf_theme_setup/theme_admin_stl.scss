@@ -1,0 +1,393 @@
+$mainColor : #21759b;
+
+$gray: #ccc;
+$infoColor : #67a6df;
+$successColor: #2da519;
+$warningColor: #edcf87;
+$dangerColor: #df4343;
+
+@mixin transition($prop : all, $time : 0.3s) {
+  -webkit-transition : $prop, $time;
+  -moz-transition    : $prop, $time;
+  -o-transition      : $prop, $time;
+  transition         : $prop, $time;
+}
+body {
+  background : transparent;
+}
+.wp-color-result {
+  height : auto;
+}
+.btn {
+  display             : inline-block;
+  padding             : 6px 12px;
+  margin-bottom       : 0;
+  font-size           : 14px;
+  font-weight         : normal;
+  line-height         : 1.42857;
+  text-align          : center;
+  white-space         : nowrap;
+  vertical-align      : middle;
+  cursor              : pointer;
+  border              : 1px solid transparent;
+  -webkit-user-select : none;
+  -moz-user-select    : none;
+  -ms-user-select     : none;
+  user-select         : none;
+  &:hover {
+    color           : #333333;
+    text-decoration : none;
+  }
+  &:focus {
+    outline : thin dotted #333333;
+  }
+  &:active, &.active {
+    background-image : none;
+    outline          : 0;
+    box-shadow       : inset 0 3px 5px $mainColor;
+  }
+}
+
+@mixin primButton($backGround : $mainColor, $color : white) {
+  @extend .btn;
+  color            : $color;
+  background-color : $backGround;
+  border-color     : darken($backGround, 10%);
+  &:hover {
+    color            : $color;
+    background-color : darken($backGround, 10%);
+    border-color     : darken($backGround, 20%);
+  }
+}
+.form-button {
+  @include primButton($infoColor);
+  padding : 10px 15px;
+  font-size : 20px;
+}
+
+
+.form-heading {
+  padding-left : 15px;
+}
+.al_admin_area {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; // 2
+  box-sizing: border-box;
+
+  & * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; // 2
+    box-sizing: border-box;
+  }
+
+  padding-left : 15px;
+  padding-right : 15px;
+  display: block;
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    width : 100%;
+    clear: both;
+    float: none;
+  }
+
+  .uploaded-file-information {
+    background : $successColor;
+    text-align : center;
+    color : #fff;
+    display: block;
+    padding : 5px;
+    margin-top : 5px;
+  }
+
+  .dismiss-image {
+    box-sizing         : border-box;
+    -moz-box-sizing    : border-box;
+    display            : block;
+    position           : absolute;
+    background         : $gray;
+    color              : #fff;
+    text-align         : center;
+    right              : 0;
+    top                : 0;
+    font-size          : 17px;
+    cursor             : pointer;
+    padding            : 7px 10px;
+    @include transition();
+
+    &:hover {
+      background : $dangerColor;
+    }
+  }
+  textarea {
+    display: block;
+    width : 100%;
+    min-height: 100px;
+  }
+  label {
+    display        : block;
+    text-align     : center;
+    text-transform : capitalize;
+    margin-bottom : 10px;
+    font-size : 17px;
+    color : #636363;
+    i {
+      margin-right : 15px;
+    }
+  }
+  .map-info-trigger {
+    font-size : 25px;
+    margin-left : 10px;
+    color : $infoColor;
+  }
+  .infiltrate-tooltip {
+    .explain-map-content {
+      width: 512px;
+      height : 219px;
+      background: url("../img/map_share.jpg");
+    }
+    .tooltip-inner {
+      max-width: none;
+    }
+  }
+
+  .child_labels {
+    position: relative;
+    &:after,
+    &:before {
+    	content: "";
+    	display: table;
+    	width : 100%;
+    	clear: both;
+    	float: none;
+    }
+    margin : 0;
+    input[type="checkbox"] {
+      float : left;
+    }
+    label {
+      float : right;
+    }
+  }
+  .image-wrap {
+    position: relative;
+    margin-top : 10px;
+    background : #fff;
+
+    img {
+      display : block;
+      height  : auto;
+      margin  : 15px auto;
+      float   : none;
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      display: table;
+      width : 100%;
+      clear: both;
+      float: none;
+    }
+    i.fa-remove {
+      position: absolute;
+      top : 0;
+      right : 0;
+      cursor: pointer;
+    }
+  }
+  input[type="text"] {
+    display : block;
+    width   : 90%;
+    margin  : 2px auto;
+    border-radius: 0;
+  }
+  input[type="file"] {
+    opacity: 0;
+    height : 1px;
+    display: block;
+  }
+
+
+  label[for$="_upload"] {
+    background : $gray;
+    padding : 10px;
+    color : #fff;
+    @include transition();
+
+    &:hover{
+      background : $infoColor;
+    }
+  }
+
+  .tab-content {
+    margin : 0;
+    border : 1px solid #ddd;
+    width : 75%;
+    float : left;
+    &:after,
+    &:before {
+    	content: "";
+    	display: table;
+    	width : 100%;
+    	clear: both;
+    	float: none;
+    }
+    .tab-pane {
+      padding : 15px;
+      background : #fff;
+      min-height : 307px;
+      &:after,
+      &:before {
+      	content: "";
+      	display: table;
+      	width : 100%;
+      	clear: both;
+      	float: none;
+      }
+    }
+  }
+  .row-with-input {
+    border-radius : 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-bottom : 0;
+    padding : 15px;
+
+    background : lighten($mainColor, 61%);
+    /*Desktop*/
+
+    @media (min-width : 768px) {}
+  }
+  .inset-row {
+    margin : 0 0 20px 0;
+  }
+  .nav-tabs {
+    margin : 0 ;
+    width: 25%;
+    display: block;
+    float: left;
+    border-bottom: none;
+
+    li {
+      float : none;
+      &.active {
+
+        a {
+          border-top : 1px solid #ddd;
+          border-right : 1px solid transparent;
+          border-bottom : 1px solid #ddd;
+          border-left : 1px solid #ddd;
+        }
+      }
+      a {
+        text-decoration : none;
+        margin : 0 -1px 0 0;
+        h3 {
+          margin : 5px 10px;
+        }
+        &:focus{
+        	box-shadow: none;
+        }
+      }
+    }
+  }
+  .al_checkbox {
+    label {
+      display: block;
+      width : 100%;
+      text-align : right;
+      i {
+        float : left;
+      }
+    }
+    &>label {
+      text-align : center;
+      cursor: default;
+      display: block;
+      width : 100%;
+    }
+    .fa-toggle-off {
+      font-size : 30px;
+    }
+    .fa-toggle-on {
+      font-size : 30px;
+      color : $successColor;
+    }
+    input[type='checkbox'] {
+      display: block;
+      width : 1px;
+      height : 1px;
+      opacity: 0;
+      position: absolute;
+      top : 1px;
+    }
+  }
+
+  label[for*="_facebook"] i:before {
+    content: "\f082";
+    color : $mainColor;
+  }
+  label[for*="_twitter"] i:before {
+    content: "\f099";
+    color : $infoColor;
+  }
+  label[for*="_google_plus"] i:before {
+    content: "\f0d5";
+    color : $dangerColor;
+  }
+  label[for*="_linkedin"] i:before {
+    content: "\f0e1";
+    color : $mainColor;
+  }
+  label[for*="_instagram"] i:before {
+    content: "\f16d";
+    color : #6e4529;
+  }
+  label[for*="_youtube"] i:before {
+    content: "\f167";
+    color : $dangerColor;
+  }
+  label[for*="_pinterest"] i:before {
+    content: "\f0d2";
+    color : $dangerColor;
+  }
+  label[for*="_vimeo"] i:before {
+    content: "\f194";
+    color : $infoColor;
+  }
+  label[for*="_vk"] i:before {
+    content: "\f189";
+    color : $mainColor;
+  }
+
+  label[for*="contact_map"] i:before {
+    content: "\f041";
+    color : $dangerColor;
+  }
+  label[for*="contact_phone"] i:before {
+    content: "\f095";
+  }
+  label[for*="discount_text"] i:before {
+    content: "\f0a1";
+  }
+  label[for*="copyright"] i:before {
+    content: "\f1f9";
+  }
+  label[for*="width"] i:before {
+    content: "\f07e";
+  }
+  label[for*="color"] i:before {
+    content: "\f1fc";
+  }
+  label[for*="_skype"] i:before {
+    content: "\f17e";
+    color: $infoColor;
+  }
+  label[for*="_mail"] i:before {
+    content: "\f0e0";
+  }
+}
+
+
